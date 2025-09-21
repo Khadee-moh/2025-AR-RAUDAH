@@ -1,0 +1,92 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+header {
+  background: #008080;
+  color: #fff;
+  padding: 1rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+nav ul li a.active {
+  font-weight: bold;
+  border-bottom: 2px solid yellow;
+}
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background: #f4f4f4;
+}
+.hand-leaf {
+  font-size: 4rem;
+  animation: bounce 2s infinite alternate;
+  margin-top: 20px;
+}
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+.about, .contact {
+  padding: 2rem;
+}
+.contact ul {
+  list-style: none;
+  margin-top: 10px;
+}
+.contact li {
+  margin: 8px 0;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: white;
+  margin-top: 20px;
+}
+@media(max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+ 
+/* 🍃 Floating Leaves */
+.leaf {
+  position: absolute;
+  top: -50px;
+  animation: fall linear forwards;
+  opacity: 0.9;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* 🌳 Tree when clicked */
+.tree {
+  position: absolute;
+  font-size: 2rem;
+  animation: grow 1s ease-in-out;
+}
+
+@keyframes grow {
+  0% { transform: scale(0); }
+  100% { transform: scale(1.2); }
+}
